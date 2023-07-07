@@ -30,8 +30,11 @@ jobs:
       - name: Run test
         run: npm run test
 
-      - name: Run test:fancy
-        run: npm run test:fancy
+      # - name: Run test:fancy
+      #   run: npm run test:fancy
+
+      - name: Run coverage test
+        run: npm run coverage
 
       # - name: Deploy to production
       #   run: |
