@@ -61,6 +61,10 @@ export class Ahorcado {
   returnVidasRestantes(): number {
     return this.erroresPosibles - this.erroresCometidos;
   }
+
+  returnVidasRestantesMasUno(): number {
+    return this.erroresPosibles - this.erroresCometidos;
+  }
 }
 
 // const juego: Ahorcado = new Ahorcado("palabra", 6);
