@@ -6,3 +6,7 @@ dist
 
 # Package-lock
 package-lock.json
+
+# Coverage Tests results
+.nyc_output
+coverage
