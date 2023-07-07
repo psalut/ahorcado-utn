@@ -1,4 +1,5 @@
-import { Ahorcado } from "../ts/game"
+import 'jasmine';
+import { Ahorcado } from "./game";
 
 describe("arriesgar palabra", () => {
 

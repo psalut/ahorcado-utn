@@ -4,14 +4,22 @@
   "description": "",
   "main": "ts/game.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc ts/game.ts --outDir dist --target es2016",
-    "start": "http-server"
+    "build": "tsc ts/game.ts --outDir dist --target es2016 && tsc ts/main.ts --outDir dist --target es2016",
+    "start": "http-server",
+    "test": "jasmine --config=jasmine.json",
+    "test:fancy": "jasmine --reporter=jasmine-console-reporter --config=jasmine.json",
+    "coverage": "nyc npm run test && nyc report --reporter=html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "@types/jasmine": "^4.0.3",
+    "http-server": "^14.1.1",
+    "jasmine": "^4.1.0",
+    "jasmine-console-reporter": "^3.1.0",
+    "nyc": "^15.1.0",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.3"
   }
 }

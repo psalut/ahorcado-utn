@@ -1,6 +1,6 @@
-const wordContainer: HTMLElement | null = document.getElementById("word-container");
-const guessesContainer: HTMLElement | null = document.getElementById("guesses-container");
-const resultContainer: HTMLElement | null = document.getElementById("result-container");
+// const wordContainer: HTMLElement | null = document.getElementById("word-container");
+// const guessesContainer: HTMLElement | null = document.getElementById("guesses-container");
+// const resultContainer: HTMLElement | null = document.getElementById("result-container");
 
 export class Ahorcado {
   public palabra: string;
@@ -63,34 +63,34 @@ export class Ahorcado {
   }
 }
 
-const juego: Ahorcado = new Ahorcado("palabra", 6);
+// const juego: Ahorcado = new Ahorcado("palabra", 6);
 
-function actualizarInterfaz(): void {
-  if (wordContainer && guessesContainer) {
-    wordContainer.innerHTML = "";
-    guessesContainer.innerHTML = "";
+// function actualizarInterfaz(): void {
+//   if (wordContainer && guessesContainer) {
+//     wordContainer.innerHTML = "";
+//     guessesContainer.innerHTML = "";
 
-    const palabraOculta: string = juego.palabra
-      .split("")
-      .map((letra: string) => (juego.letrasUsadas.includes(letra) ? letra : "_"))
-      .join(" ");
-    wordContainer.innerHTML = palabraOculta;
+//     const palabraOculta: string = juego.palabra
+//       .split("")
+//       .map((letra: string) => (juego.letrasUsadas.includes(letra) ? letra : "_"))
+//       .join(" ");
+//     wordContainer.innerHTML = palabraOculta;
 
-    const letrasArriesgadas: string = juego.letrasUsadas.join(", ");
-    guessesContainer.innerHTML = `Letras arriesgadas: ${letrasArriesgadas}`;
+//     const letrasArriesgadas: string = juego.letrasUsadas.join(", ");
+//     guessesContainer.innerHTML = `Letras arriesgadas: ${letrasArriesgadas}`;
 
-    if (resultContainer && juego.getErrores() === juego.erroresPosibles) {
-      resultContainer.innerHTML = "PERDISTE";
-    }
-  }
-}
+//     if (resultContainer && juego.getErrores() === juego.erroresPosibles) {
+//       resultContainer.innerHTML = "PERDISTE";
+//     }
+//   }
+// }
 
-document.addEventListener("keydown", (event: KeyboardEvent): void => {
-  const letra: string = event.key.toLowerCase();
-  const resultado: boolean | string = juego.arriesgarLetra(letra);
-  if (resultado === true || resultado === "PERDISTE") {
-    actualizarInterfaz();
-  }
-});
+// document.addEventListener("keydown", (event: KeyboardEvent): void => {
+//   const letra: string = event.key.toLowerCase();
+//   const resultado: boolean | string = juego.arriesgarLetra(letra);
+//   if (resultado === true || resultado === "PERDISTE") {
+//     actualizarInterfaz();
+//   }
+// });
 
-actualizarInterfaz();
+// actualizarInterfaz();
