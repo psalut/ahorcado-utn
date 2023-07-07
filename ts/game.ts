@@ -2,7 +2,7 @@ const wordContainer: HTMLElement | null = document.getElementById("word-containe
 const guessesContainer: HTMLElement | null = document.getElementById("guesses-container");
 const resultContainer: HTMLElement | null = document.getElementById("result-container");
 
-class Ahorcado {
+export class Ahorcado {
   public palabra: string;
   public erroresPosibles: number;
   public erroresCometidos: number;
