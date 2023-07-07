@@ -1,0 +1,22 @@
+body {
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+#word-container {
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+#guesses-container {
+  margin-bottom: 20px;
+}
+
+#result-container {
+  font-weight: bold;
+  font-size: 20px;
+  color: #ff0000;
+}

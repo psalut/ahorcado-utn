@@ -1,0 +1,17 @@
+{
+  "name": "ahorcado-utn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ts/game.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc ts/game.ts --outDir dist --target es2016",
+    "start": "http-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
