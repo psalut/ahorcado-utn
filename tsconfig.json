@@ -1,6 +1,12 @@
 {
   "compilerOptions": {
     "target": "ES2016",
-    "lib": ["ES2016", "DOM"]
+    "lib": ["ES2016", "DOM"],
+    "module": "CommonJS",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist"
   }
 }

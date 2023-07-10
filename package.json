@@ -4,7 +4,9 @@
   "description": "",
   "main": "ts/game.ts",
   "scripts": {
-    "build": "tsc ts/game.ts --outDir dist --target es2016 && tsc ts/app.ts --outDir dist --target es2016",
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
     "test": "jasmine --config=jasmine.json",
     "test:fancy": "jasmine --reporter=jasmine-console-reporter --config=jasmine.json",
     "coverage": "nyc npm run test && nyc report --reporter=html"
@@ -13,11 +15,19 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/express": "^4.17.17",
     "@types/jasmine": "^4.0.3",
+    "@types/node": "^20.4.1",
+    "concurrently": "^8.2.0",
     "jasmine": "^4.1.0",
     "jasmine-console-reporter": "^3.1.0",
+    "nodemon": "^3.0.1",
     "nyc": "^15.1.0",
     "ts-node": "^10.8.1",
-    "typescript": "^4.7.3"
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
   }
 }
